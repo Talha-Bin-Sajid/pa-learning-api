@@ -1,0 +1,5 @@
+node_modules
+dist
+coverage
+supabase/.temp
+package-lock.json

@@ -1,0 +1,55 @@
+{
+  "name": "pa-learning-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Project Accountants Learning Platform - REST API (Node.js, TypeScript, Clean Architecture, Supabase PostgreSQL)",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/main.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "seed:dev": "tsx scripts/seed-dev.ts",
+    "db:link": "npx supabase link",
+    "db:push": "npx supabase db push",
+    "demo": "tsx scripts/demo-server.ts",
+    "check:setup": "tsx scripts/check-setup.ts",
+    "rename:domain": "tsx scripts/rename-email-domain.ts",
+    "set:password": "tsx scripts/set-password.ts",
+    "evidence:backfill": "tsx scripts/backfill-evidence-checks.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.27.0",
+    "cors": "^2.8.6",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "jose": "^6.2.12",
+    "multer": "^2.4.0",
+    "nodemailer": "^7.0.13",
+    "pg": "^8.23.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^20.19.43",
+    "@types/nodemailer": "^7.0.12",
+    "@types/pg": "^8.23.1",
+    "@types/supertest": "^6.0.3",
+    "prettier": "^3.9.9",
+    "supertest": "^7.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "vitest": "~4.1.11"
+  }
+}

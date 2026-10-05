@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output (npm run build)
+dist/
+*.tsbuildinfo
+
+# Environment - secrets live here, never commit them. Keep the template.
+.env
+.env.*
+!.env.example
+
+# Supabase CLI local state (created by `npm run db:link`)
+supabase/.temp/
+supabase/.branches/
+
+# Tests / coverage
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editors & OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
